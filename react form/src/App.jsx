@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export const App=()=>{
+
+  const [data,setData]=useState({
+    userName:"",
+    password:""
+  });
+
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    console.log(data);
+  }
+
+  const handleInput=(e)=>{
+    const {name,value}=e.target;
+setData((previous)=>({...previous,[name]:value}))    ;
+  }
+  
+  return <form onSubmit={handleSubmit}>
+
+    <h1>Sign in</h1>
+  <section>
+    <div>
+    <label htmlFor="name">UserName</label>
+    <input type="text" name="userName" id="name"  value={data.userName} onChange={handleInput}/>
+
+    </div>
+<div>
+    <label htmlFor="pass">Password</label>
+    <input type="password" name="password" id="pass" value={data.password} onChange={handleInput} />
+
+</div>
+<button type="submit">submit</button>
+  </section>
+  </form>
+
+
+
 }
-
-export default App
