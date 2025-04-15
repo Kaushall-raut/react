@@ -44,6 +44,7 @@ console.log(data);
             <label htmlFor="female">female</label>
             <input type="radio" id='female'name='gender' value="female" onClick={handleInput}/>
          
+         
     
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" onChange={handleInput} />
