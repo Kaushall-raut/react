@@ -1,0 +1,106 @@
+form{
+    /* max-width: 500px; */
+    width: 40rem;
+    margin :2rem auto;
+    border-radius: 1rem;
+box-shadow:  0 10px 25px rgba(31, 30, 30, 0.616);
+padding: 1rem;
+}
+
+
+
+label  {
+    display: block;
+    font-size: 1.2rem;
+    margin: 1rem 2rem 0.5rem;
+}
+h1{
+    text-align: center;
+}
+
+button{
+    display: block;
+    /* display: flex; */
+    /* align-items: center; */
+    width: 90%;
+    background-color: #4f46e5;
+    margin:1rem  ;
+    padding: 0.3rem;
+    border-radius: 10px;
+    font-size: large;
+    
+    color: white;
+}
+input{
+    height: 2rem;
+    outline: none;
+    border-radius: 4px;
+    width: 90%;
+    margin: 0rem 1rem;
+}
+
+/* 
+.better-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .better-form h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .better-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .better-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .better-form input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  }
+  
+  .better-form button {
+    background-color: #4f46e5;
+    color: white;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .better-form button:hover {
+    background-color: #4338ca;
+  }
+  
+  @media (max-width: 600px) {
+    .better-form {
+      padding: 1.5rem;
+    }
+  }
+   */
