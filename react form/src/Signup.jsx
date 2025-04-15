@@ -7,7 +7,8 @@ export const SignUp = ()=>{
         lastName:"",
         password:"",
         email:"",
-        contact:""
+        contact:"",
+        gender:""
     })
 
     const handleSubmit=(e)=>{
@@ -37,7 +38,12 @@ console.log(data);
     
             <label htmlFor="lastName">lastName</label>
             <input type="text" name="lastName" id="lastName" onChange={handleInput} />
-        
+
+            <label htmlFor="male">male</label>
+            <input type="radio" id='male' name='gender' value="male" onClick={handleInput}/>
+            <label htmlFor="female">female</label>
+            <input type="radio" id='female'name='gender' value="female" onClick={handleInput}/>
+         
     
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" onChange={handleInput} />
