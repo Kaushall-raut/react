@@ -1,7 +1,8 @@
-import { UseEffectPractise } from "./components/hooks/UseEffect"
+import { FetchData } from "./components/fetch/FetchData"
+
 
 export const App = ()=>{
   return <>
-  <UseEffectPractise/>
+  <FetchData/>
   </>
 }
