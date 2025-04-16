@@ -1,1 +1,1 @@
-In this repo i practise all react based concept you can check my files to learn new things that you don't know and dont miss the comments present in between the files it contains importants points or information
+In this repo i practise all react based concept you can check my code to learn new things that you don't know and dont miss the comments present in between the files it contains importants points or information
