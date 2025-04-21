@@ -1,13 +1,16 @@
 
 import './App.css'
-import { Parent } from './hooks/memo/parent'
+import { Counter } from './hooks/UseMemo/Counter'
+
 
 function App() {
-  // const [count, setCount] = useState(0)
+  
 
   return (
     <>
-    <Parent/>
+    {/* <Parent/> */}
+    {/* <Calculation/> */}
+    <Counter/>
     </>
   )
 }
