@@ -22,3 +22,9 @@ export const Header = () => {
     </div>
   );
 };
+// ! react router by default provide a active link class so you can directly add css for active named class
+
+// !another way for creating active class
+// * classNam={(isActive)=>{isActive?active:notActive}}
+// isActive parameter is provided by react router like event parameter
+//  it is used when your application is large
