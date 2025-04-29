@@ -8,6 +8,10 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { ErrorPage } from "./pages/ErrorPage";
 
+import { RandomData } from "./api/RandomData";
+import { DynamicRouting } from "./pages/DynamicRouting";
+import Data from "./pages/Data";
+
 export const App = () => {
   const router = createBrowserRouter([
     {
@@ -24,6 +28,16 @@ export const App = () => {
         {
           path: "contact",
           element: <Contact />,
+        },
+        {
+          path: "data",
+          element: <Data />,
+          loader: RandomData,
+        },
+        {
+          path: "data/:id",
+          element: <DynamicRouting />,
+          // loader: RandomData,
         },
       ],
     },

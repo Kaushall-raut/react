@@ -13,24 +13,24 @@
   /* -moz-osx-font-smoothing: grayscale; */
 }
 
-
-body{
+body {
   margin: 0rem;
-  padding:0rem;
+  padding: 0rem;
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
 }
 
-#root{
+#root {
   height: 100vh;
   /* display: flex; */
   /* justify-content: center; */
   /* flex-direction: column; */
 }
-#root main{
-  height:calc(100vh - 5rem);
+#root main {
+  height: calc(100vh - 5rem);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }

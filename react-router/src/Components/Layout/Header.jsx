@@ -12,6 +12,7 @@ export const Header = () => {
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="about">about</NavLink>
                 <NavLink to="contact">Contact</NavLink>
+                <NavLink to="data">Data</NavLink>
                 <NavLink to="SignUp">SignUp</NavLink>
                 <NavLink to="SignIn">SignIn</NavLink>
               </div>
