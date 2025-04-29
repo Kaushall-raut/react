@@ -3,11 +3,11 @@ import { Outlet, useNavigation } from "react-router";
 import { Header } from "./Header";
 import { Loader } from "../Loader";
 export const AppLayout = () => {
-  let loader = useNavigation();
+  let loader = useNavigation();  //this hook is used to display a loader in website 
   console.log(loader);
 
   if (loader.state == "loading") {
-    return <Loader />;
+    return <Loader />; 
   }
   return (
     <>
