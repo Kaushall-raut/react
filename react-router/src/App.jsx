@@ -14,6 +14,7 @@ export const App = () => {
       path: "/",
       element: <AppLayout />,
       errorElement: <ErrorPage />, //so whenever user type wrong url then only this component will get rendered
+
       children: [
         { index: true, element: <Home /> },
         {
