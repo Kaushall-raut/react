@@ -13,6 +13,7 @@ export const FormData = async ({ request }) => {
 }; //by default it gets a request,response object and this function must be async because it will return a promise
 
 export const Contact = () => {
+
   //Form is a component imported from react router which is used to handle form data
   return (
     <>
