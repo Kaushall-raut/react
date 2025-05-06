@@ -1,49 +1,25 @@
 import { useContext } from "react";
 import { ContextData } from "../context/ContextApi";
-import { Button, TextField } from "@mui/material";
+import { Input } from "./InputComponent";
+import { Card } from "./Card";
 
 export const MainComponent = () => {
   const apiData = useContext(ContextData);
-  console.log(apiData);
+  console.log("data", apiData);
   return (
     <>
-      <main className="bg-slate-700 h-screen flex justify-center items-center flex-col  ">
-        <div  >
-        <input type="text" placeholder="Primary" className="input input-primary" />
-          <TextField id="outlined-basic" label="Outlined" variant="filled"  color="success"/>
-          <TextField id="outlined-basic" label="Outlined" variant="outlined" style={{margin:"0rem 1rem"}} />
-          <Button variant="contained" size="large">
-            Primary
-          </Button>
-        </div>
-        <ul>
-          <div className="grid grid-cols-3 gap-5  border border-blue-700  p-6 m-10">
-            <li>
-              <div>kaushal</div>
-            </li>
-            <li>
-              <div>kaushal</div>
-            </li>
-            <li>
-              <div>kaushal</div>
-            </li>
-            <li>
-              <div>kaushal</div>
-            </li>
+      <main className="bg-slate-700  flex justify-baseline items-center flex-col  pt-3 pb-12">
+        <Input />
+        <ul className="grid grid-cols-3 gap-3 ">
+          {apiData.map((value) => {
+            console.log("log", value);
 
-            <li>
-              <div>kaushal</div>
-            </li>
-            <li>
-              <div>kaushal</div>
-            </li>
-            <li>
-              <div>kaushal</div>
-            </li>
-            <li>
-              <div>kaushal</div>
-            </li>
-          </div>
+            return (
+              <li key={apiData.id}>
+                <Card value={value} />
+              </li>
+            );
+          })}
         </ul>
       </main>
     </>
