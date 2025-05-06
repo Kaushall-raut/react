@@ -1,21 +1,10 @@
-import { useEffect } from "react";
-import { getData } from "./Api/PostApi";
+import { DataWrapper } from "./context/ContextApi";
+import { MainComponent } from "./components/MainComponent";
 
 export const App = () => {
-  console.log(getData());
-
-  const getApiData = async () => {
-    const res = await getData();
-    console.log(res);
-  };
-
-  useEffect(() => {
-    getApiData();
-  }, []);
-
   return (
-    <>
-      <h1>hello</h1>
-    </>
+    <DataWrapper>
+      <MainComponent />
+    </DataWrapper>
   );
 };
