@@ -5,15 +5,13 @@ import { Card } from "./Card";
 
 export const MainComponent = () => {
   const apiData = useContext(ContextData);
-  console.log("data", apiData);
+  // console.log("data", apiData);
   return (
     <>
-      <main className="bg-slate-700  flex justify-baseline items-center flex-col  pt-3 pb-12">
+      <main className="bg-slate-700  flex justify-baseline items-center flex-col w-[100%] pt-3 pb-12">
         <Input />
-        <ul className="grid grid-cols-3 gap-3 ">
+        <ul className="grid  lg:grid-cols-3 gap-3 md:grid-cols-2   sm:grid-cols-1  ">
           {apiData.map((value) => {
-            console.log("log", value);
-
             return (
               <li key={apiData.id}>
                 <Card value={value} />
