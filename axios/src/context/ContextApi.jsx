@@ -20,6 +20,8 @@ export const DataWrapper = ({ children }) => {
   }, []);
 
   return (
-    <ContextData.Provider value={apiData}>{children}</ContextData.Provider>
+    <ContextData.Provider value={{ apiData, setApiData }}>
+      {children}
+    </ContextData.Provider>
   );
 };

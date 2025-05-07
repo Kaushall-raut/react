@@ -1,7 +1,30 @@
 /* eslint-disable no-unused-vars */
+
+import { useContext } from "react";
+import { deleteData } from "../Api/PostApi";
+import { ContextData } from "../context/ContextApi";
+
 /* eslint-disable react/prop-types */
 export const Card = ({ value }) => {
+  const { apiData, setApiData } = useContext(ContextData);
   const { id, body, title } = value;
+
+  const handleDelete = async (id) => {
+    try {
+      const res = await deleteData(id);
+
+      if (res.status === 200) {
+        const updateDelete = apiData.filter((value) => {
+          // console.log(value);
+
+          return value.id !== id;
+        });
+        setApiData(updateDelete);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="card bg-slate-800 text-neutral-content w-96 h-[18rem]">
@@ -16,7 +39,9 @@ export const Card = ({ value }) => {
         </p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">Edit</button>
-          <button className="btn btn-accent">Delete</button>
+          <button className="btn btn-accent" onClick={() => handleDelete(id)}>
+            Delete
+          </button>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Input } from "./InputComponent";
 import { Card } from "./Card";
 
 export const MainComponent = () => {
-  const apiData = useContext(ContextData);
+  const { apiData } = useContext(ContextData);
   // console.log("data", apiData);
   return (
     <>
@@ -13,7 +13,7 @@ export const MainComponent = () => {
         <ul className="grid  lg:grid-cols-3 gap-3 md:grid-cols-2   sm:grid-cols-1  ">
           {apiData.map((value) => {
             return (
-              <li key={apiData.id}>
+              <li key={value.id}>
                 <Card value={value} />
               </li>
             );
