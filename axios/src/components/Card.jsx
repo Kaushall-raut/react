@@ -31,19 +31,19 @@ export const Card = ({ value }) => {
   return (
     <li
       key={id}
-      className="card bg-slate-800 text-neutral-content w-96 h-[18rem] list-inside"
+      className="p-2 bg-slate-800 text-neutral-content w-96 h-[18rem] rounded-2xl"
     >
       {/* <div className="card-body items-center text-center"> */}
       {/* <h2 className="card-title">{id}</h2> */}
-      <p>
-        <span>Title : </span>
+      <p className="m-2">
+        <span className="font-bold">Title : </span>
         {title}
       </p>
-      <p>
+      <p className="m-2">
         <span className="font-bold">Body </span> : {body}
       </p>
       {/* <div className="card-actions justify-end"> */}
-      <button className="btn btn-primary">Edit</button>
+      <button className="btn btn-primary m-2">Edit</button>
       <button className="btn btn-accent" onClick={() => handleDelete(id)}>
         Delete
       </button>
