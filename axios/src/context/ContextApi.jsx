@@ -17,7 +17,7 @@ export const DataWrapper = ({ children }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  },[]);
 
   return (
     <ContextData.Provider value={{ apiData, setApiData }}>

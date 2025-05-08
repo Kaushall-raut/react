@@ -1,0 +1,10 @@
+.list-type{
+    /* display: grid; */
+    /* grid-template-columns: repeat(3,1fr); */
+    list-style:decimal;
+    list-style-position: inside;
+}
+li{
+    list-style: decimal;
+    list-style-position: inside;
+}

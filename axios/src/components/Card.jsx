@@ -11,6 +11,8 @@ export const Card = ({ value }) => {
 
   const handleDelete = async (id) => {
     try {
+      console.log(id);
+
       const res = await deleteData(id);
 
       if (res.status === 200) {
@@ -27,23 +29,26 @@ export const Card = ({ value }) => {
   };
 
   return (
-    <div className="card bg-slate-800 text-neutral-content w-96 h-[18rem]">
-      <div className="card-body items-center text-center">
-        <h2 className="card-title">{id}</h2>
-        <p>
-          <span>Title : </span>
-          {title}
-        </p>
-        <p>
-          <span className="font-bold">Body </span> : {body}
-        </p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Edit</button>
-          <button className="btn btn-accent" onClick={() => handleDelete(id)}>
-            Delete
-          </button>
-        </div>
-      </div>
-    </div>
+    <li
+      key={id}
+      className="card bg-slate-800 text-neutral-content w-96 h-[18rem] list-inside"
+    >
+      {/* <div className="card-body items-center text-center"> */}
+      {/* <h2 className="card-title">{id}</h2> */}
+      <p>
+        <span>Title : </span>
+        {title}
+      </p>
+      <p>
+        <span className="font-bold">Body </span> : {body}
+      </p>
+      {/* <div className="card-actions justify-end"> */}
+      <button className="btn btn-primary">Edit</button>
+      <button className="btn btn-accent" onClick={() => handleDelete(id)}>
+        Delete
+      </button>
+      {/* </div> */}
+      {/* </div> */}
+    </li>
   );
 };
