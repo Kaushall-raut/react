@@ -13,3 +13,8 @@ export const getData = () => {
 export const deleteData = (id) => {
   return api.delete(`/posts/${id}`);
 };
+
+//post method to add data in the api
+export const addData = (data) => {
+  return api.post("/posts", data); //payload ,data that will added in the api
+};

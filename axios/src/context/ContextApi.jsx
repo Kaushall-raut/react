@@ -10,7 +10,7 @@ export const DataWrapper = ({ children }) => {
 
   const fetchData = async () => {
     const res = await getData();
-    console.log("res", res);
+    // console.log("res", res);
 
     setApiData(res.data);
   };
