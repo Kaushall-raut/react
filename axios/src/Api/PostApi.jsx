@@ -18,3 +18,7 @@ export const deleteData = (id) => {
 export const addData = (data) => {
   return api.post("/posts", data); //payload ,data that will added in the api
 };
+
+export const putData = (id, data) => {
+  return api.put(`/posts/${id}`, data);
+};

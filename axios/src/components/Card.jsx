@@ -30,8 +30,9 @@ export const Card = ({ value }) => {
   };
 
   const handleEdit = (value) => {
-    // console.log(value);/
+    // console.log(value);
     setUpdatedData({
+      id: value.id,
       title: value.title,
       body: value.body,
     });
