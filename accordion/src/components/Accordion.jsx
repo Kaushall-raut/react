@@ -17,13 +17,13 @@ export const Accordion = () => {
   return (
     <div className="  flex justify-center flex-col items-center ">
       <h1 className="mt-4 text-4xl text-[#4C3BCF] mb-8  font-bold">
-        Accordion in Rect
+        Accordion in React
       </h1>
       <ul className="w-full">
         {jsonData.map((currentValue) => {
           return (
             <Card
-              key={currentValue}
+              key={currentValue.id}
               value={currentValue}
               active={active === currentValue.id}
               handleButton={() => {
