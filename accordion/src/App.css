@@ -1,0 +1,7 @@
+.box-shadow{
+    /* border-radius: 10px; */
+   box-shadow:  rgba(215, 5, 99, 0.12) 0px 2px 4px 0px, rgba(29, 157, 211, 0.32) 0px 2px 16px 0px;
+}
+#root{
+    height: 100vh;
+}
