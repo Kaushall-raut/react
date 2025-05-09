@@ -6,6 +6,8 @@ export const ContextData = createContext();
 
 // eslint-disable-next-line react/prop-types
 export const DataWrapper = ({ children }) => {
+  const [updatedData, setUpdatedData] = useState({});
+
   const [apiData, setApiData] = useState([]);
 
   const fetchData = async () => {
@@ -17,10 +19,12 @@ export const DataWrapper = ({ children }) => {
 
   useEffect(() => {
     fetchData();
-  },[]);
+  }, []);
 
   return (
-    <ContextData.Provider value={{ apiData, setApiData }}>
+    <ContextData.Provider
+      value={{ apiData, setApiData, updatedData, setUpdatedData }}
+    >
       {children}
     </ContextData.Provider>
   );

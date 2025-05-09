@@ -6,7 +6,8 @@ import { ContextData } from "../context/ContextApi";
 
 /* eslint-disable react/prop-types */
 export const Card = ({ value }) => {
-  const { apiData, setApiData } = useContext(ContextData);
+  const { apiData, setApiData, updatedData, setUpdatedData } =
+    useContext(ContextData);
   const { id, body, title } = value;
 
   const handleDelete = async (id) => {
@@ -28,6 +29,15 @@ export const Card = ({ value }) => {
     }
   };
 
+  const handleEdit = (value) => {
+    // console.log(value);/
+    setUpdatedData({
+      title: value.title,
+      body: value.body,
+    });
+    // console.log(updatedData);
+  };
+
   return (
     <li
       key={id}
@@ -43,7 +53,9 @@ export const Card = ({ value }) => {
         <span className="font-bold">Body </span> : {body}
       </p>
       {/* <div className="card-actions justify-end"> */}
-      <button className="btn btn-primary m-2">Edit</button>
+      <button className="btn btn-primary m-2" onClick={() => handleEdit(value)}>
+        Edit
+      </button>
       <button className="btn btn-accent" onClick={() => handleDelete(id)}>
         Delete
       </button>
